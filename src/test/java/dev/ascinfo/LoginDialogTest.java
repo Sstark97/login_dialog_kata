@@ -1,12 +1,17 @@
 package dev.ascinfo;
 
+import dev.ascinfo.doubles.AuthenticatorStrictMock;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class LoginDialogTest {
   @Test
-  void have_fun_using_test_doubles() {
-    assertTrue(true);
+  void loging_dialog_correctly_invokes_authenticator() {
+    AuthenticatorStrictMock authenticatorMock = new AuthenticatorStrictMock("user", "password", true);
+    LoginDialog dialog = new LoginDialog(authenticatorMock);
+
+    dialog.show();
+    dialog.submit("user", "password");
+
+    authenticatorMock.verify();
   }
 }

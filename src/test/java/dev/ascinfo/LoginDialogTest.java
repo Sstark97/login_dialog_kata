@@ -14,6 +14,7 @@ class LoginDialogTest {
     dialog.show();
     boolean success = dialog.submit("user", "pw");
 
+    assertTrue(success);
     assertEquals(1, authenticatorSpy.calls());
     assertEquals("user", authenticatorSpy.registeredUserName());
     assertEquals("pw", authenticatorSpy.registeredPassword());

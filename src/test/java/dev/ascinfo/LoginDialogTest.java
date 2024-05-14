@@ -23,7 +23,7 @@ class LoginDialogTest {
     LoginDialog dialog = new LoginDialog(authenticatorFake);
 
     dialog.show();
-    boolean success = dialog.submit("user", "good password");
+    boolean success = dialog.submit("username", "good password");
 
     assertFalse(success);
   }

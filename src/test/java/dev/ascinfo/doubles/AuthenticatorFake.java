@@ -6,6 +6,6 @@ public class AuthenticatorFake implements Authenticator {
 
   @Override
   public boolean authenticate(String username, String password) {
-    return username.equals("username") & password.equals("good password");
+    return username.length() == 5 & password.length() == 8;
   }
 }

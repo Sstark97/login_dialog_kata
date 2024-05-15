@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class LoginDialogTest {
   @Test
-  void loging_dialog_correctly_invokes_authenticator() {
+  void login_dialog_correctly_invokes_authenticator() {
     AuthenticatorStrictMock authenticatorMock = new AuthenticatorStrictMock("user", "password", true);
     LoginDialog dialog = new LoginDialog(authenticatorMock);
 

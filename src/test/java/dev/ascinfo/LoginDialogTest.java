@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LoginDialogTest {
   @Test
-  public void when_authorizer_allow_login_work_well() throws Exception {
+  public void when_authorizer_allow_login_work_well() {
     Authenticator authenticator = new AuthenticatorStub(true);
     LoginDialog dialog = new LoginDialog(authenticator);
 
@@ -18,7 +18,7 @@ class LoginDialogTest {
   }
 
   @Test
-  public void when_authorizer_deny_login_work_well() throws Exception {
+  public void when_authorizer_deny_login_work_well() {
     Authenticator authenticator = new AuthenticatorStub(false);
     LoginDialog dialog = new LoginDialog(authenticator);
 
